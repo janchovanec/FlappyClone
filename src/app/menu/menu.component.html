@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+</head>
+<body>
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Menu</ion-title>
+
+      <ion-title slot="end">
+        <ion-icon src="assets/icon/battery-half-outline.svg"></ion-icon>
+        <ion-label style="padding: 1%; font-size: large">{{ Math.round(batteryStatus) }} %</ion-label>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-title class="game-title">Flappy Bird</ion-title>
+    <ion-button color="dark" expand="block" (click)="startGame()" >START GAME</ion-button>
+    <ion-button color="dark" expand="block" (click)="showHighscores()" >HIGH SCORES</ion-button>
+    <ion-button color="dark" expand="block" (click)="showSettings()" >SETTINGS</ion-button>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar color="dark">
+      <ion-title>Jan Chovanec 2024</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
+
+</body>
+</html>

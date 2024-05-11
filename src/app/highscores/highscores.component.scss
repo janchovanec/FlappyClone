@@ -1,0 +1,28 @@
+ion-content {
+  --background: url('/assets/img/background1.png') no-repeat center center / cover;
+}
+
+.highscore-list {
+  margin: 5px 5px 20px;
+  padding: 5px;
+  font-size: 20px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  background-color: rgba(0, 0, 0, 0);
+
+
+  ion-list-header {
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ffa115;
+    text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+
+  ion-item {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #ffa115;
+    --background: rgba(0, 0, 0, 0.8);
+  }
+
+}
+

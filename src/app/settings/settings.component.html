@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+</head>
+<body>
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>Settings</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <ion-list class="settings-list">
+      <ion-item>
+        <ion-label>Scroll speed</ion-label>
+        <ion-range min="1" max="100" step="1" snaps="true" [(ngModel)]="settings.scrollSpeed" (ionChange)="onSpeedChange($event)">
+          <ion-icon slot="start" src="assets/icon/play-outline.svg"></ion-icon>
+          <ion-icon slot="end" src="assets/icon/play-forward-outline.svg"></ion-icon>
+        </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-label>Volume</ion-label>
+        <ion-range min="0" max="100" step="1" snaps="true" [(ngModel)]="settings.volume" (ionChange)="onVolumeChange($event)">
+          <ion-icon slot="start" src="assets/icon/volume-off-outline.svg"></ion-icon>
+          <ion-icon slot="end" src="assets/icon/volume-high-outline.svg"></ion-icon>
+      </ion-range>
+      </ion-item>
+      <ion-item>
+        <ion-label slot="start">Vibrations</ion-label>
+        <ion-toggle slot="start" [(ngModel)]="settings.vibration" (ionChange)="onVibrationChange($event)"></ion-toggle>
+      </ion-item>
+      <ion-item>
+        <ion-label>Skin</ion-label>
+        <ion-grid>
+          <ion-row>
+            <ion-col size="3">
+              <ion-img src="assets/img/flappybird.png" [ngClass]="{'selected-skin': settings.skin === 'flappybird'}" (click)="onSkinSelect('flappybird')"></ion-img>
+            </ion-col>
+            <ion-col size="3">
+              <ion-img src="assets/img/cowboy.png" [ngClass]="{'selected-skin': settings.skin === 'cowbird'}" (click)="onSkinSelect('cowbird')"></ion-img>
+            </ion-col>
+            <ion-col size="3">
+              <ion-img src="assets/img/japan.png" [ngClass]="{'selected-skin': settings.skin === 'japanbird'}" (click)="onSkinSelect('japanbird')"></ion-img>
+            </ion-col>
+            <ion-col size="3">
+              <ion-img [src]="settings.customSkinPath" [ngClass]="{'selected-skin': settings.skin === 'customBird'}" (click)="onSkinSelect('customBird')"></ion-img>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+      <ion-item>
+        <ion-button fill="clear" style="width: 100%; height: 100%; font-size: 1.5em; font-weight: bold;" (click)="onCustomSkin()">
+          <ion-icon slot="start" src="assets/icon/camera-outline.svg"></ion-icon>
+          Custom Skin</ion-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="onBack()">
+          <ion-icon slot="icon-only" src="assets/icon/return-down-back-outline.svg"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>
+
+</body>
+</html>

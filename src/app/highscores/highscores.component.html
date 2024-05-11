@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highscores</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@latest/css/ionic.bundle.css">
+</head>
+<body>
+<ion-app>
+  <ion-header>
+    <ion-toolbar color="dark">
+      <ion-title>High Scores</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="onResetHighscores()">
+          <ion-icon slot="icon-only" src="assets/icon/trash-outline.svg"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list class="highscore-list">
+      <ion-list-header>
+        <ion-label>Name</ion-label>
+        <ion-label>Score</ion-label>
+        <ion-label>Date</ion-label>
+      </ion-list-header>
+      <ion-item *ngFor="let score of highscores">
+        <ion-label>{{score.name}}</ion-label>
+        <ion-label>{{score.score}}</ion-label>
+        <ion-label>{{score.date.substring(0, 16)}}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button (click)="onBack()">
+          <ion-icon slot="icon-only" src="assets/icon/return-down-back-outline.svg"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-button>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-footer>
+</ion-app>

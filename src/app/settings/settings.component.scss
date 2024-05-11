@@ -1,0 +1,54 @@
+ion-content {
+  --background: url('/assets/img/background1.png') no-repeat center center / cover;
+}
+
+.settings-list {
+  margin-top: 2%;
+  background-color: rgba(0,0,0, 0.8);
+  border-radius: 20px;
+  ion-item {
+    --ion-item-background: rgba(0,0,0, 0);
+    color: orange;
+    ion-range {
+      --bar-background-active: rgba(255, 165, 0, 1);
+      --bar-background-inactive: rgba(255, 165, 0, 0.5);
+      --knob-background: orange;
+      --knob-size: 2em;
+      --bar-height: 0.3em;
+      --bar-border-radius: 1em;
+    }
+    ion-toggle {
+      --handle-background: orange;
+      --handle-background-checked: orange;
+      --background: #ff7f00;
+      --background-checked: #ff7f00;
+    }
+    ion-button {
+      --background: orange;
+      --border-radius: 20px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+}
+
+.settings-image {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    animation: slide 0.5s infinite alternate;
+}
+
+@keyframes slide {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+.selected-skin {
+  animation: slide 0.5s infinite alternate;
+}

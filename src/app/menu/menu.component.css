@@ -1,0 +1,20 @@
+ion-content {
+  --background: url('/assets/img/background1.png') no-repeat center center / cover;
+}
+
+.game-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-shadow: 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000, 0 0 5px #000;
+  animation: slide 500ms infinite alternate;
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 2%;
+}
+
+@keyframes slide {
+  0% { transform: translateX(-1%); color: #ffa115 }
+  100% { transform: translateX(1%); ; color: #ffb138 }
+}

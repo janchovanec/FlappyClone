@@ -1,0 +1,45 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+
+.phaserDiv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #101010;
+}
+
+#save-score-button, #return-to-menu-button {
+  position: absolute;
+  top: 10px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#save-score-button {
+  left: 10px;
+}
+
+#return-to-menu-button {
+  right: 10px;
+}
+
+.gameDiv {
+    position: absolute;
+    top : 60%;
+    left : 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  button {
+    margin: 0 10px; /* This adds a 10px space between the buttons */
+  }
+}
